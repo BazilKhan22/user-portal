@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Auth & CRUD App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Signup Page -->
+    <div id="signup-page" class="page">
+        <h2>Sign Up</h2>
+        <input type="email" id="signup-email" placeholder="Enter email">
+        <input type="password" id="signup-password" placeholder="Enter password">
+        <button id="signup-btn">Sign Up</button>
+        <p>Already have an account? <a href="#" id="login-link">Login</a></p>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login-page" class="page hidden">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Enter email">
+        <input type="password" id="login-password" placeholder="Enter password">
+        <button id="login-btn">Login</button>
+        <p>Don't have an account? <a href="#" id="signup-link">Sign Up</a></p>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home-page" class="page hidden">
+        <header>
+            <button id="update-profile-btn">Update Profile</button>
+            <button id="logout-btn">Logout</button>
+        </header>
+        <h2>Create Post</h2>
+        <input type="text" id="post-title" placeholder="Post Title">
+        <textarea id="post-description" placeholder="Post Description"></textarea>
+        <button id="create-post-btn">Create Post</button>
+
+        <div id="posts-container"></div>
+    </div>
+
+    <!-- Update Profile Page -->
+    <div id="profile-page" class="page hidden">
+        <h2>Update Profile</h2>
+        <input type="file" id="profile-picture" accept="image/*">
+        <button id="save-profile-btn">Save Profile</button>
+        <button id="back-to-home-btn">Back to Home</button>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification"></div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
